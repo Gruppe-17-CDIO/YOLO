@@ -9,9 +9,6 @@ __libdarknet/*.so
 
 *.egg-info
 
-cfg/*.data
-cfg/*.cfg
-
 weights/*.weights
 
 pydarknet.cpp
