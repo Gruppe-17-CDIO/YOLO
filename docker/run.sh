@@ -6,4 +6,4 @@ mkdir output
 docker build -t yolo3-4-py .
 
 # Run the docker image
-docker run --rm -it --name yolo3-4-py -v `pwd`/input:/YOLO3-4-Py/input -v `pwd`/output:/YOLO3-4-Py/output yolo3-4-py
+docker run --rm -it --name yolo3-4-py -v `pwd`/input:/YOLO/input -v `pwd`/output:/YOLO/output yolo3-4-py
