@@ -24,17 +24,17 @@ RUN ldconfig
 ## Downloading and compiling darknet ##
 WORKDIR /
 RUN apt-get install -y git
-RUN git clone https://github.com/pjreddie/darknet.git
-WORKDIR /darknet
+RUN git clone https://github.com/JustusGammelgaard/darknet-1.git
+WORKDIR /darknet-1
 # Set OpenCV makefile flag
 RUN sed -i '/OPENCV=0/c\OPENCV=1' Makefile
 RUN make
-ENV DARKNET_HOME /darknet
-ENV LD_LIBRARY_PATH /darknet
+ENV DARKNET_HOME /darknet-1
+ENV LD_LIBRARY_PATH /darknet-1
 
 ## Download and compile YOLO3-4-Py ##
 WORKDIR /
-RUN git clone https://github.com/JustusGammelgaard/CleanSlate.git
+RUN git clone https://github.com/JustusGammelgaard/YOLO.git
 WORKDIR /YOLO
 RUN pip3 install pkgconfig
 RUN pip3 install cython
