@@ -2,6 +2,7 @@ from pydarknet import Detector, Image
 import cv2
 import os
 import time
+import json
 
 if __name__ == "__main__":
     net = Detector(bytes("cfg/yolov123.cfg", encoding="utf-8"), bytes("weights/yolov123.weights", encoding="utf-8"), 0, bytes("cfg/coco.data",encoding="utf-8"))
@@ -16,7 +17,7 @@ if __name__ == "__main__":
         img2 = Image(img)
 
         start_time = time.time()
-        results = net.detect(img2, thresh=.3, hier_thresh=.3, nms=.25)
+        results = net.detect1(img2, thresh=.3, hier_thresh=.3, nms=.25)
         end_time = time.time()
         print(results)
         print("Elapsed Time:", end_time-start_time)
