@@ -17,7 +17,7 @@ if __name__ == "__main__":
         img2 = Image(img)
 
         start_time = time.time()
-        results = net.detect1(img2, thresh=.3, hier_thresh=.3, nms=.25)
+        results = net.detect(img2, thresh=.3, hier_thresh=.3, nms=.25)
         end_time = time.time()
         print(results)
         print("Elapsed Time:", end_time-start_time)
