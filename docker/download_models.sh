@@ -17,4 +17,5 @@ wget -O data/coco.names https://raw.githubusercontent.com/JustusGammelgaard/YOLO
 
 echo "Downloading yolov3 weights"
 mkdir weights
-wget -O weights/yolov123.weights https://yoloweights.imfast.io/yolov123.weights
+#wget -O weights/yolov123.weights https://yoloweights.imfast.io/yolov123.weights
+wget -O weights/yolov3_30000.weights https://weight30000.imfast.io/yolov3_30000.weights
