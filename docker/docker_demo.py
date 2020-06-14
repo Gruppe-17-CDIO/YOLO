@@ -20,7 +20,7 @@ if __name__ == "__main__":
         results = net.detect(img2, thresh=.3, hier_thresh=.3, nms=.25)
         end_time = time.time()
         #print("Virker det overhovedet")
-	print(results)
+        print(results)
         print("Elapsed Time:", end_time-start_time)
         for cat, score, bounds in results:
             print("score: " + score)
