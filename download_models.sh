@@ -4,7 +4,8 @@ echo "Downloading config files..."
 
 mkdir cfg
 wget -O cfg/coco.data https://raw.githubusercontent.com/JustusGammelgaard/YOLO/master/cfg/coco.data
-wget -O cfg/yolov123.cfg https://raw.githubusercontent.com/JustusGammelgaard/YOLO/master/cfg/yolov123.cfg
+wget -O cfg/yolov123.cfg https://trainingweight.imfast.io/yolov3-tiny.cfg 
+#https://raw.githubusercontent.com/JustusGammelgaard/YOLO/master/cfg/yolov123.cfg
 
 echo "Modify config parameters to enable Testing mode"
 sed -i '/batch=64/c\# batch=64' cfg/yolov3.cfg
@@ -18,4 +19,5 @@ wget -O data/coco.names https://raw.githubusercontent.com/JustusGammelgaard/YOLO
 echo "Downloading yolov3 weights"
 mkdir weights
 #wget -O weights/yolov123.weights https://yoloweights.imfast.io/yolov123.weights
-wget -O weights/yolov123.weights https://weight30000.imfast.io/yolov3_30000.weights
+wget -O weights/yolov123.weights https://trainingweight.imfast.io/yolov3-tiny-21000.weights
+ #https://weight30000.imfast.io/yolov3_30000.weights
