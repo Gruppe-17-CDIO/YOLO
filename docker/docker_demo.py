@@ -21,7 +21,7 @@ if __name__ == "__main__":
         end_time = time.time()
         print(results)
         print("Elapsed Time:", end_time-start_time)
-
+        json_output = open('json_output.txt', 'a+')
         for cat, score, bounds in results:
             x, y, w, h = bounds
             cat_str = cat.decode("utf-8")
@@ -29,7 +29,6 @@ if __name__ == "__main__":
             res.append(json.dumps)
             #cv2.rectangle(img, (int(x - w / 2), int(y - h / 2)), (int(x + w / 2), int(y + h / 2)), (255, 0, 0), thickness=2)
             #cv2.putText(img,str(cat.decode("utf-8")),(int(x),int(y)),cv2.FONT_HERSHEY_DUPLEX,4,(0,0,255), thickness=2)
-            json_output = open('json_output.txt', 'a+')
             json_output.write(json.dumps)
         cv2.imwrite(os.path.join("output",file_name), img)
         json_output.close()
