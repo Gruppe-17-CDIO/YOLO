@@ -5,9 +5,9 @@ import time
 import json
 
 if __name__ == "__main__":
-    net = Detector(bytes("cfg/yolov123.cfg", encoding="utf-8"), bytes("weights/yolov123.weights", encoding="utf-8"), 0, bytes("cfg/coco.data",encoding="utf-8"))
+    net = Detector(bytes("cfg/yolov123.cfg", encoding="utf-8"), bytes("weights/yolov300.weights", encoding="utf-8"), 0, bytes("cfg/coco.data",encoding="utf-8"))
 
-    input_files = os.listdir("input")
+    input_files = os.listdir("docker/input")
     for file_name in input_files:
         if not file_name.lower().endswith(".jpg"):
             continue
