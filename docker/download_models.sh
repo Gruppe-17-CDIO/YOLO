@@ -15,7 +15,7 @@ sed -i '/# subdivisions=1/c\subdivisions=1' cfg/yolov3.cfg
 mkdir data
 wget -O data/coco.names https://raw.githubusercontent.com/JustusGammelgaard/YOLO/master/data/coco.names
 
-echo "Downloading yolov3 weights"
+echo "Downloading yolov123 weights"
 mkdir weights
 #wget -O weights/yolov123.weights https://yoloweights.imfast.io/yolov123.weights
-wget -O weights/yolov123.weights https://weight30000.imfast.io/yolov3_30000.weights
+wget -c -O weights/yolov123.weights https://weight30000.imfast.io/yolov3_30000.weights
