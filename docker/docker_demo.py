@@ -17,7 +17,8 @@ if __name__ == "__main__":
         img2 = Image(img)
 
         start_time = time.time()
-        results = net.detect(img2, thresh=.3, hier_thresh=.3, nms=.25)
+        #results = net.detect(img2, thresh=.3, hier_thresh=.3, nms=.25)
+        results = net.detect(img2)
         end_time = time.time()
         if len(results)==0:
             print("No results")
@@ -26,7 +27,6 @@ if __name__ == "__main__":
         print(results)
         print("Elapsed Time:", end_time-start_time)
         for cat, score, bounds in results:
-            print("score: " + score)
             x, y, w, h = bounds
             cat_str = cat.decode("utf-8")
             json = {"x": x, "y": y, "w": w, "h": h, "cat": cat_str, "score": score}
