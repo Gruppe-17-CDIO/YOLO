@@ -36,5 +36,5 @@ if __name__ == "__main__":
         cv2.imwrite(os.path.join("output",file_name), img)
         with open("json_out.txt", "w") as file:
             for item in res:
-                file.write("%s\n", item)
+                file.write("%s\n" + item)
         print()
