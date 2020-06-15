@@ -30,7 +30,7 @@ if __name__ == "__main__":
             x, y, w, h = bounds
             cat_str = cat.decode("utf-8")
             json = {"x": x, "y": y, "w": w, "h": h, "cat": cat_str, "score": score}
-            res.append(json)
+            res.append(json.dumps)
             cv2.rectangle(img, (int(x - w / 2), int(y - h / 2)), (int(x + w / 2), int(y + h / 2)), (255, 0, 0), thickness=2)
             cv2.putText(img,str(cat.decode("utf-8")),(int(x),int(y)),cv2.FONT_HERSHEY_DUPLEX,4,(0,0,255), thickness=2)
         cv2.imwrite(os.path.join("output",file_name), img)
