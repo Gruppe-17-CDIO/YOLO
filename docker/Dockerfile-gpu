@@ -48,6 +48,5 @@ ADD ./download_models.sh /YOLO/download_models.sh
 RUN sh download_models.sh
 
 ## Run test ##
-##WORKDIR /YOLO/docker
 ADD ./docker_demo.py /YOLO/docker_demo.py
 CMD ["python3", "docker_demo.py"]
