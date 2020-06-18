@@ -17,5 +17,5 @@ echo "Downloading config files..."
 
 echo "Downloading yolov3 weights"
 mkdir weights
-wget -O https://trainingweight.imfast.io/yolov3-tiny-21000.weights
+wget -O weights/yolov3-tiny-21000 https://trainingweight.imfast.io/yolov3-tiny-21000.weights
 #wget -c -O weights/yolov3.weights https://finalweightscfg.imfast.io/yolov3.weights
