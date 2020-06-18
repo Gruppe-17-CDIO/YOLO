@@ -1,5 +1,5 @@
 classes= 52
 train  = /darknet/data/val.txt
 valid  = /darknet/data/val.txt
-names = /darknet/data/cards.names
+names = /YOLO/data/coco.names
 backup = /darknet/backup
