@@ -21,7 +21,7 @@ app = Flask(__name__)
 api = Api(app)
 
 # Upload dir: wwwroot + /images
-UPLOAD_DIR = "/home/justus/Desktop/YOLO/input"
+UPLOAD_DIR = "/YOLO/input"
 
 @app.route("/")
 def server_root():
@@ -82,11 +82,11 @@ def recognize(filename):
         json_obj = {"x": x, "y": y, "w": w, "h": h, "cat": cat_str, "score": score}
         #Append JSON to list
         res.append(json_obj)
-        cv2.rectangle(img, (int(x - w / 2), int(y - h / 2)), (int(x + w / 2), int(y + h / 2)), (255, 0, 0), thickness=2)
-        cv2.putText(img,str(cat.decode("utf-8")),(int(x),int(y)),cv2.FONT_HERSHEY_DUPLEX,4,(0,0,255), thickness=2)
+        #cv2.rectangle(img, (int(x - w / 2), int(y - h / 2)), (int(x + w / 2), int(y + h / 2)), (255, 0, 0), thickness=2)
+        #cv2.putText(img,str(cat.decode("utf-8")),(int(x),int(y)),cv2.FONT_HERSHEY_DUPLEX,4,(0,0,255), thickness=2)
     print(res)
-    cv2.imwrite(os.path.join("output", "outputpic.png"), img)
+    #cv2.imwrite(os.path.join("output", "outputpic.png"), img)
     return json.dumps(res)
 
 if __name__ == "__main__":
-    app.run(port="5000")
+    app.run(host="172.17.0.2", port="6969")

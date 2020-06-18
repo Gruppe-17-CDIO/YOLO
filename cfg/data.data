@@ -1,5 +1,5 @@
 classes= 52
-train  = /home/justus/Desktop/darknet/data/val.txt
-valid  = /home/justus/Desktop/darknet/data/val.txt
-names = /home/justus/Desktop/darknet/data/cards.names
-backup = /home/justus/Desktop/darknet/backup
+train  = /darknet/data/val.txt
+valid  = /darknet/data/val.txt
+names = /darknet/data/cards.names
+backup = /darknet/backup
