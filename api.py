@@ -57,7 +57,7 @@ def recognize(filename):
     dark_img = dimg(img)
     print("Filename: ", img)
     #create darknet detector
-    net = Detector(bytes("cfg/yolofinal.cfg", encoding="utf-8"), bytes("weights/yolov3.weights", encoding="utf-8"), 0, bytes("cfg/data.data", encoding="utf-8"))
+    net = Detector(bytes("cfg/yolov3-tiny.cfg", encoding="utf-8"), bytes("weights/yolov3-tiny-21000.weights", encoding="utf-8"), 0, bytes("cfg/data.data", encoding="utf-8"))
     res = [] 
     
     start_time = time.time()
