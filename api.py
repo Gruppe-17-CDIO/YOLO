@@ -42,9 +42,9 @@ def post_file(filename):
 
     # return json
     #print(request.data)
-
     return recognize(filename), 200
-
+    
+    
 
 def recognize(filename):
     #Read img
